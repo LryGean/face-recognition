@@ -1,4 +1,3 @@
-import abc
 from typing import Text
 import cv2
 import numpy as np
@@ -107,7 +106,7 @@ def name():
 
 
 cap=cv2.VideoCapture(0)
-#cap = cv2.VideoCapture('http://admin:981222@192.168.43.182:8081/')
+# cap = cv2.VideoCapture('http://admin:981222@192.168.137.209:8081/')
 
 #默认分辨率为640x480,设置成1920x1080
 cap.set(cv2.CAP_PROP_FRAME_WIDTH,1920)
@@ -121,7 +120,8 @@ while True:
     face_detect_demo(frame) 
     if ord(' ') == cv2.waitKey(10):
         break
+print("over!")
 cv2.destroyAllWindows()
 cap.release()
-playsound('asd.mp3')#输出音频
+playsound('./mp3/1.mp3')#输出音频
 #print(names)
